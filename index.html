@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calcy || Karan Bhangu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 style="display: flex">
+        <p class="titled">C</p>
+        <p class="titled">A</p>
+        <p class="titled">L</p>
+        <p class="titled">C</p>
+        <p class="titled">Y</p>
+      </h1>
+      <div class="themes">
+        <div
+          class="colors"
+          id="color1"
+          onclick="changeTheme('#00A6FB', this)"
+        ></div>
+        <div
+          class="colors"
+          id="color2"
+          onclick="changeTheme('#F3752B', this)"
+        ></div>
+        <div
+          class="colors"
+          id="color3"
+          onclick="changeTheme('#DB5ABA', this)"
+        ></div>
+        <div
+          class="colors"
+          id="color4"
+          onclick="changeTheme('#B0A990', this)"
+        ></div>
+      </div>
+    </header>
+    <section id="calculator">
+      <div id="background">
+        <!-- LOL BACKGROUND DONE  -->
+      </div>
+      <div id="calcybody">
+        <div class="screen">
+          <input type="text" id="screened" readonly value="0" />
+          <div class="result" id="ans"></div>
+        </div>
+        <div class="keypad">
+          <div class="rows row0">
+            <div class="keys" style="background-color: #E84855;width: 50%;" onclick="document.getElementById(
+              'screened'
+            ).value = 0; document.getElementById('ans').innerText = 0">C</div>
+            <div class="keys" onclick="backspace()"> < </div>
+            <div class="keys">/</div>
+          </div>
+          <div class="rows row1">
+            <p class="keys" onclick="clickAnimation(this)">9</p>
+            <p class="keys" onclick="clickAnimation(this)">8</p>
+            <p class="keys" onclick="clickAnimation(this)">7</p>
+            <p class="keys" onclick="clickAnimation(this)">+</p>
+          </div>
+          <div class="rows row2">
+            <p class="keys" onclick="clickAnimation(this)">6</p>
+            <p class="keys" onclick="clickAnimation(this)">5</p>
+            <p class="keys" onclick="clickAnimation(this)">4</p>
+            <p class="keys" onclick="clickAnimation(this)">-</p>
+          </div>
+          <div class="rows row3">
+            <p class="keys" onclick="clickAnimation(this)">3</p>
+            <p class="keys" onclick="clickAnimation(this)">2</p>
+            <p class="keys" onclick="clickAnimation(this)">1</p>
+            <p class="keys" onclick="clickAnimation(this)">*</p>
+          </div>
+          <div class="rows row4">
+            <p class="keys" onclick="clickAnimation(this)">00</p>
+            <p class="keys" onclick="clickAnimation(this)">0</p>
+            <p class="keys" onclick="clickAnimation(this)">.</p>
+            <p class="keys" onclick="evaluation(this)" id="evaluation">=</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Webiste designed by <a href="https://github.com/Karanbhangu" target="_blank">KaranBhangu</a></p>
+    </footer>
+  </body>
+  <script src="./anime.js"></script>
+  <script src="./app.js"></script>
+</html>
